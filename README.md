@@ -19,7 +19,7 @@ This app features all the latest tools and practices in web development!
 
 - ⚛  **ReactJs**
 - ⚡  **TailwindCSS**
-- 💖 **Lint**
+- 💖 **SASS**
 
 ## Getting started
 
