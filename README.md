@@ -26,6 +26,6 @@ This app features all the latest tools and practices in web development!
 First you need to have `node` and `yarn` installed on your machine. Then, you can clone this repository and run the following commands inside the project folder:
 
 1. `yarn`;
-2. `yarn dev`;
+2. `yarn start`;
 
 To view the project you can open [localhost:3000](http://localhost:3000)
