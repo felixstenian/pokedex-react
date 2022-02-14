@@ -8,8 +8,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/' component={Main} />
-        <Route path='/profile/:id' component={Profile} />
+        <Route path='/' exact component={Main} />
+        <Route path='/pokemon/:name' component={Profile} />
       </Switch>
     </BrowserRouter>
   )
