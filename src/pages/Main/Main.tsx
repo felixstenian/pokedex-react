@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react'
 
+import { PokemonCard } from '../../components'
+
+import './styles.scss'
+
 const Main = () => {
   const [pokemonList, setPokemonList] = useState<Array<any>>([])
   const [nextPage, setNextPage] = useState<any>('https://pokeapi.co/api/v2/pokemon-form/')
@@ -27,28 +31,17 @@ const Main = () => {
     getAllPokemons()
   }, [])
 
-  const loadingMore = async () => {
-    console.log('click')
-    const response = await fetch(nextPage)
-    const data = await response.json()
-    const { next, results } = data
-
-    setNextPage(next)
-    createObjectPokemon(results)
-  }
-
   return (
-    <>
+    <div className='container'>
       <h1>PokeDex - Main</h1>
-      {pokemonList?.map((pokemon: any) => (
-        <div key={pokemon.name}>
-          <h1>{pokemon.name}</h1>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-        </div>
-      ))}
+      <div className='content'>
+        {pokemonList?.map((pokemon: any) => (
+          <PokemonCard pokemon={pokemon} key={pokemon.name} />
+        ))}
+      </div>
 
-      <button onClick={loadingMore}>next</button>
-    </>
+      <button onClick={getAllPokemons}>Ver mais</button>
+    </div>
   )
 }
 
