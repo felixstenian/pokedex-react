@@ -1,8 +1,40 @@
-.container {
+.container-main {
   display: flex;
   align-items: center;
   justify-content: center;
 
   flex-direction: column;
   flex-wrap: wrap;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(68, 12, 141);
+    margin-bottom: 20px;
+
+    h1 {
+      color: #fafafa;
+    }
+  }
+
+  button {
+    margin: 20px 0;
+    background-color: aqua;
+    border: 0;
+    padding: 10px;
+    color: #144e77;
+    border-radius: 10px;
+    width: 150px;
+    font-weight: 600;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(21, 230, 230);
+    }
+  }
 }

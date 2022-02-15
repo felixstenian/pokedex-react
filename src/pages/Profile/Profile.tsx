@@ -18,11 +18,11 @@ const Profile = () => {
     getData()
   }, [name])
 
-  console.log({ pokemonData })
+  // console.log({ pokemonData })
 
   return (
-    <div className='container'>
-      <main>
+    <div className='container-profile'>
+      <main className='content'>
         <header>
           <h1>{pokemonData?.name}</h1>
           <h1>#{pokemonData?.order}</h1>

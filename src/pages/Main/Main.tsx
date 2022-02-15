@@ -32,8 +32,10 @@ const Main = () => {
   }, [])
 
   return (
-    <div className='container'>
-      <h1>PokeDex - Main</h1>
+    <div className='container-main'>
+      <header>
+        <h1>PokeDex</h1>
+      </header>
       <div className='content'>
         {pokemonList?.map((pokemon: any) => (
           <PokemonCard pokemon={pokemon} key={pokemon.name} />
