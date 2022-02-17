@@ -18,16 +18,19 @@ const Profile = () => {
     getData()
   }, [name])
 
-  // console.log({ pokemonData })
-
   return (
     <div className='container-profile'>
-      <main className='content'>
-        <header>
+      <header>
+        <div className='header'>
+          <p>
+            <Link to='/'>Voltar</Link>
+          </p>
           <h1>{pokemonData?.name}</h1>
           <h1>#{pokemonData?.order}</h1>
-        </header>
-        <div>
+        </div>
+      </header>
+      <main className='content'>
+        <div className='types'>
           <ul>
             {pokemonData?.types?.map((type: any) => (
               <li>{type.type.name}</li>
@@ -42,16 +45,14 @@ const Profile = () => {
             <ul>
               {pokemonData?.stats?.map((stat: any) => (
                 <li>
-                  {stat?.stat?.name} - {stat?.base_stat}
+                  <div className='stat'>{stat?.stat?.name}</div>
+                  <div className='value'>{stat?.base_stat}</div>
                 </li>
               ))}
             </ul>
           </div>
         </section>
       </main>
-      <p>
-        <Link to='/'>Voltar</Link>
-      </p>
     </div>
   )
 }
